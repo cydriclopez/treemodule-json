@@ -149,7 +149,7 @@ added 1211 packages from 1217 contributors and audited 1229 packages in 110.928s
 
 ### 5. Run ***ng serve --host 0.0.0.0 --disable-host-check***
 
-After ***npm install** has done installing the requisite software then we are ready to run this demo.
+After ***npm install*** has done installing the requisite software then we are ready to run this demo.
 
 In the command we include the parameters ***--host 0.0.0.0 --disable-host-check*** to tell the Angular development server to:
 1. "--host 0.0.0.0" - listen on all Ethernet devices
