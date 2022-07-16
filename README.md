@@ -190,15 +190,55 @@ This demo code started life as a clone of the [PrimeNG Angular-CLI](https://gith
 I added the ***Tree Demo*** button to display the tree-demo page:<br/>
 <img src="images/primeng-quickstart-cli.png" width="650"/>
 
+Note that I implemented the routing right in [app.module.ts](https://github.com/cydriclopez/treemodule-json/blob/main/src/client/src/app/app.module.ts). Most usually routing is implemented in a separate class file ***app-routing.module.ts***. This is a very small app so I decided to just plug the routing code right in ***app.module.ts***.
+
+To implement routing we have to have the key pieces in the following listing.
+
+```typescript
+import { RouterModule, Routes } from '@angular/router';
+    .
+    :
+        RouterModule.forRoot([
+            {
+                path: '', component: HomeComponent,
+                children: [
+                    {path: '', component: AppComponent},
+                    {path: 'home', component: AppComponent},
+                    {path: 'tree', component: TreedemoComponent},
+                ]
+            },
+            {path: '**', redirectTo: ''},
+        ], {useHash: true})
+
+     ],
+     exports: [RouterModule],
+    .
+    :
+    bootstrap: [HomeComponent]
+```
+
+The original bootstrap value was:
+
+```typescript
+    bootstrap: [AppComponent]
+```
+
+I reset the line to  ***bootstrap: [HomeComponent]*** because this component now hosts the router outlet tag. I created [src/app/home/home.component.html](https://github.com/cydriclopez/treemodule-json/blob/main/src/client/src/app/home/home.component.html) to host the ***router-outlet*** tag which the router uses as outlet.
+
+```html
+<router-outlet></router-outlet>
+```
+
+
 This is the ***Tree Demo*** and clicking on ***List Demo*** brings you back to the previous list-demo page.<br/>
 <img src="images/primeng-tree-demo.png" width="650"/>
 
-This ***Tree Demo*** page started life as the [Primeng tree-demo](https://www.primefaces.org/primeng/tree). Here is the [StackBlitz tree-demo](https://stackblitz.com/edit/primeng-tree-demo?file=src%2Fapp%2Fapp.component.ts). Go over this code. I did not copy it exactly. I just used the lower tree and adapted the ***Expand*** and ***Collapse*** buttons. For demo purposes yes it is perfectly fine.
+This ***Tree Demo*** page started life as the [Primeng tree-demo](https://www.primefaces.org/primeng/tree). Here is the [StackBlitz tree-demo](https://stackblitz.com/edit/primeng-tree-demo?file=src%2Fapp%2Fapp.component.ts). Go over this code. I did not copy it exactly. I just used the lower tree and adapted the ***Expand*** and ***Collapse*** buttons. For demo purposes this code is perfectly fine.
 
-However, the moment your code takes on the semblance of a half-decent app you stop coding this way.
+However, the moment your code takes on the semblance of a half-decent app then you stop coding this way. The component is mostly for UI display. Most of the logic have to be transitioned to the service.
 
+Below is my suggestion of how to code it. Btw the ***selector: 'app-treedemo'*** becomes useless and is now preempted by the ***router-outlet*** tag mentioned above. So here I commented it.
 
-Below is my suggestion of how to code it.
 ```typescript
 import { Component, OnInit } from '@angular/core';
 import { NodeService } from '../services/nodeservice';
@@ -236,7 +276,7 @@ export class TreedemoComponent implements OnInit {
 }
 ```
 
-The service:
+This is the service used by the above component. Note that it is a singleton as denoted by the ***providedIn: 'root'*** in the ***@injectable()*** decorator. The declaration of interface ***TreeNode2***, which extends ***TreeNode***, can be moved to a separate file but instead I declared it here for compactness.
 
 ```typescript
 import { HttpClient } from '@angular/common/http';
@@ -298,6 +338,6 @@ export class NodeService {
 
 }
 ```
+Still under construction... 😊
 
 ---
-Under construction... 😊
