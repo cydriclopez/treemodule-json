@@ -18,7 +18,7 @@ When your app expands in features and functionality, components that need access
 
 I am way far from an Angular expert. It took me about 6 months to grok Angular. It has a steep learning curve but it was worth it. I have dabbled with React, Vue, and etc. and I like them all.
 
-However I have gravitated towards Angular because, it being a SPA framework, it has the semblance of the classic fat-client app but uses standard web tech (HTML, JavaScript, and CSS). And code in Angular is written in TypeScript that once you get used to it, it gets hard to go back to plain JavaScript.
+However I have gravitated towards Angular because, it being a SPA framework, it has the semblance of the classic fat-client app but uses standard web tech (HTML, JavaScript, and CSS). And code in Angular is written in TypeScript that once you get used to, it gets hard to go back to plain JavaScript.
 
 Angular has built-in formalizations of stuff like Components, Directives, Dependency Injection, Singleton Service, PWA web service worker, RxJS Observables, Jasmine-Karma testing, and etc. These are all built-in baked into Angular. In other frameworks they may be provided by separate and disparate 3rd-party library.
 
