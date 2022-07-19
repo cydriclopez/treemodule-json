@@ -240,7 +240,7 @@ This ***Tree Demo*** page started life as the [Primeng tree-demo](https://www.pr
 
 However, the moment your code takes on the semblance of a half-decent app then you stop coding this way. The component is mostly for UI display. Most of the logic have to be transitioned to a service.
 
-Below is my suggestion of how to code it. Btw the ***selector: 'app-treedemo'*** becomes useless and is now preempted by the ***router-outlet*** tag mentioned above. So here I commented it.
+Below is my suggestion of how to code it. Btw the ***selector: 'app-treedemo'*** is now preempted by the ***router-outlet*** tag mentioned above. It can be commented out.
 
 Note that access to the ***files*** data is now via the getter method ***get files()***. This effectively renders the ***this.nodeService.files*** data as read-only. A UI Component has no business directly altering data. If allowed, it can subsequently create chaos down the road. I have seen this problem far too many times enough to resolve to write about it.
 
@@ -249,7 +249,7 @@ import { Component, OnInit } from '@angular/core';
 import { NodeService } from '../services/nodeservice';
 
 @Component({
-  // selector: 'app-treedemo',
+  selector: 'app-treedemo',
   templateUrl: './treedemo.component.html',
   styleUrls: ['./treedemo.component.css'],
 })
@@ -344,8 +344,7 @@ export class NodeService {
 }
 ```
 
-Presently as shown above, access to the JSON data is via a static file
-[client/src/assets/data/files.json](https://github.com/cydriclopez/treemodule-json/blob/main/src/client/src/assets/data/files.json). In succeeding iteration of this code we will access a Go webapp controller that gets its data from a Postgresql table.
+Presently as shown in the ***getFiles()*** method above, access to the JSON data is via a static file [client/src/assets/data/files.json](https://github.com/cydriclopez/treemodule-json/blob/main/src/client/src/assets/data/files.json). In succeeding iteration of this code we will access a Go webapp controller that gets its data from a Postgresql table.
 
 I hope this has been helpful.
 
