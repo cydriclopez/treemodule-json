@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { NodeService } from '../services/nodeservice';
 
 @Component({
-  // selector: 'app-treedemo',
+  selector: 'app-treedemo',
   templateUrl: './treedemo.component.html',
   styleUrls: ['./treedemo.component.css'],
 })
