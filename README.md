@@ -238,11 +238,11 @@ This is the ***Tree Demo*** and clicking on ***List Demo*** brings you back to t
 
 This ***Tree Demo*** page started out as the [Primeng tree-demo](https://www.primefaces.org/primeng/tree). Here is the [StackBlitz tree-demo](https://stackblitz.com/edit/primeng-tree-demo?file=src%2Fapp%2Fapp.component.ts). Go over this code. I did not copy it exactly. I used the lower tree and adapted the ***Expand*** and ***Collapse*** buttons. For demo purposes this code is perfectly fine.
 
-However, the moment your code takes on the semblance of a half-decent app then you stop coding this way. The component is mostly for UI display. Most of the logic have to be transitioned to a service.
+However, the moment your code takes on the semblance of a half-decent app then you stop coding this way. Components are mostly for UI display. Most of the logic have to be transferred to a service.
 
 Below is my suggestion of how to code it. Btw the ***selector: 'app-treedemo'*** is now preempted by the ***router-outlet*** tag mentioned above. It can be commented out but I kept it here.
 
-Note that access to the ***files*** data is now via the getter method ***get files()***. This effectively renders the ***this.nodeService.files*** data as read-only. A UI Component has no business directly altering data. If allowed, it can subsequently create chaos down the road. **I have seen this problem far too many times enough to resolve to write about it.**
+Note that access to the ***files*** data is now via the getter method ***get files()***. This effectively renders the ***this.nodeService.files*** data as read-only. A UI Component has no business directly altering data. If allowed, it can subsequently create chaos in the future. **I have seen this problem far too many times enough to resolve to write about it.**
 
 ```typescript
 import { Component, OnInit } from '@angular/core';
@@ -281,7 +281,7 @@ export class TreedemoComponent implements OnInit {
 }
 ```
 
-This is the service used by the above component. Note that it is a singleton as denoted by the ***providedIn: 'root'*** in the ***@injectable()*** decorator. The declaration of interface ***TreeNode2***, which extends ***TreeNode***, can be moved to a separate file but instead I declared it here for compactness.
+This is the service used by the above component. Note that it is a singleton as denoted by the ***providedIn: 'root'*** in the ***@Injectable()*** decorator. The declaration of interface ***TreeNode2***, which extends ***TreeNode***, can be moved to a separate file but instead I declared it here for compactness.
 
 ```typescript
 import { HttpClient } from '@angular/common/http';
