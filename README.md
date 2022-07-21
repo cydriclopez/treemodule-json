@@ -49,7 +49,7 @@ Let us get started. Again, I suggest that you read how to [Dockerize your Angula
 
 ### 1. Using git clone this project into a working folder
 
-**Carefully** follow my steps below. Your path will be different. <ins>**You will have to use your own path here.**</ins>
+**Carefully** follow my steps below. Your path will be different. <ins>**Substitute your own path here.**</ins>
 
 For example in my laptop, I make a folder ***github_02***.
 
@@ -84,13 +84,13 @@ Note the result of the ***pwd*** command which stands for ***print working direc
 
 ### 2. Alter your ***angular*** alias command in ***~/.bashrc*** file
 
-Note that the previous ***pwd*** command returned the current path. Your path will be different. <ins>**You will have to use your own path here.**</ins>
+Note that the previous ***pwd*** command returned the current path. Your path will be different. <ins>**Substitute your own path here.**</ins>
 
 ```bash
 /home/user1/Projects/github_02/treemodule-json/src/client
 ```
 
-You will have to alter the ***alias angular*** command in your ***~/.bashrc*** accordingly by adding another ***-v*** volume mapping. <ins>**You will have to use your own path here.**</ins> However try maintain the container mapping into the ***:/home/node/ng/treemodule-json*** folder.
+You will have to alter the ***alias angular*** command in your ***~/.bashrc*** accordingly by adding another ***-v*** volume mapping. <ins>**Substitute your own path here.**</ins> However try maintain the container mapping into the ***:/home/node/ng/treemodule-json*** folder.
 
 ```bash
 # Setup Docker Angular working environment
@@ -112,7 +112,7 @@ Reload the ***~/.bashrc*** file using the command: ***source ~/.bashrc***.
 
 After ***~/.bashrc*** script file reloads then the ***angular*** alias command becomes available. The ***angular*** alias command brings us into the Angular Docker container. Note that the prompt changes to ***/home/node/ng #***.
 
-Then here we issue the command ***cd treemodule-json*** to change folder. Note that in the previous step we mapped this folder to our host PC's folder ***/home/user1/Projects/github_02/treemodule-json/src/client***. <ins>**Note that you will have to use your own path here.**</ins>
+Then here we issue the command ***cd treemodule-json*** to change folder. Note that in the previous step we mapped this folder to our host PC's folder ***/home/user1/Projects/github_02/treemodule-json/src/client***. <ins>**Substitute your own path here.**</ins>
 
 ```bash
 :angular
