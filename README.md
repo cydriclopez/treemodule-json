@@ -39,8 +39,8 @@ You might want to read how to [Dockerize your Angular dev environment](https://g
 Steps to run this project:
 1. Using git clone this project into a working folder
 2. Alter your ***angular*** alias command in ***~/.bashrc*** file
-3. Run the ***angular*** alias then ***cd*** into ***src/client*** folder
-4. Run ***npm install*** in the ***src/client*** folder
+3. Run the ***angular*** alias then ***cd treemodule-json*** folder
+4. Run ***npm install*** in the ***treemodule-json*** folder
 5. Run ***ng serve --host 0.0.0.0***
 
 After ***step 5*** we will have a short discussion on the simple code in this demo.
@@ -187,9 +187,9 @@ At this point you can open your browser to URL [http://localhost:4200/](http://l
 
 ### Discussion on the simple code in this demo
 
-This demo code started life as a clone of the [PrimeNG Angular-CLI](https://github.com/primefaces/primeng-quickstart-cli) project. It is the quickest way to scaffold your project using the Primeng UI components. I have looked around for various UI component libraries and have learned to like Primeng.
+This demo code started out as a clone of the [PrimeNG Angular-CLI](https://github.com/primefaces/primeng-quickstart-cli) project. It is the quickest way to scaffold your project using the Primeng UI components. I have looked around for various UI component libraries and have learned to like Primeng.
 
-I have largely maintained as is this demo code of the [PrimeNG Angular-CLI](https://github.com/primefaces/primeng-quickstart-cli) project. I tweaked it a bit to make room for the tree-demo page. It is in the tree-demo page that I have made modifications to implement my suggestions.
+I have largely maintained as is this demo code of the [PrimeNG Angular-CLI](https://github.com/primefaces/primeng-quickstart-cli) project. I tweaked it a bit to make room for the tree-demo page by adding a button and implementing routing. It is in the tree-demo page that I have made modifications to implement my suggestions.
 
 I added the ***Tree Demo*** button to display the tree-demo page:<br/>
 <img src="images/primeng-quickstart-cli.png" width="650"/>
