@@ -242,7 +242,7 @@ However, the moment your code takes on the semblance of a half-decent app then y
 
 Below is my suggestion of how to code it. Btw the ***selector: 'app-treedemo'*** is now preempted by the ***router-outlet*** tag mentioned above. It can be commented out but I kept it here.
 
-Note that access to the ***files*** data is now via the getter method ***get files()***. This effectively renders the ***this.nodeService.files*** data as read-only. A UI Component has no business directly altering data. If allowed, it can subsequently create chaos down the road. I have seen this problem far too many times enough to resolve to write about it.
+Note that access to the ***files*** data is now via the getter method ***get files()***. This effectively renders the ***this.nodeService.files*** data as read-only. A UI Component has no business directly altering data. If allowed, it can subsequently create chaos down the road. **I have seen this problem far too many times enough to resolve to write about it.**
 
 ```typescript
 import { Component, OnInit } from '@angular/core';
