@@ -236,7 +236,7 @@ I set the line to  ***bootstrap: [HomeComponent]*** because this new component n
 This is the ***Tree Demo*** and clicking on ***List Demo*** brings you back to the previous list-demo page.<br/>
 <img src="images/primeng-tree-demo.png" width="650"/>
 
-This ***Tree Demo*** page started life as the [Primeng tree-demo](https://www.primefaces.org/primeng/tree). Here is the [StackBlitz tree-demo](https://stackblitz.com/edit/primeng-tree-demo?file=src%2Fapp%2Fapp.component.ts). Go over this code. I did not copy it exactly. I used the lower tree and adapted the ***Expand*** and ***Collapse*** buttons. For demo purposes this code is perfectly fine.
+This ***Tree Demo*** page started out as the [Primeng tree-demo](https://www.primefaces.org/primeng/tree). Here is the [StackBlitz tree-demo](https://stackblitz.com/edit/primeng-tree-demo?file=src%2Fapp%2Fapp.component.ts). Go over this code. I did not copy it exactly. I used the lower tree and adapted the ***Expand*** and ***Collapse*** buttons. For demo purposes this code is perfectly fine.
 
 However, the moment your code takes on the semblance of a half-decent app then you stop coding this way. The component is mostly for UI display. Most of the logic have to be transitioned to a service.
 
