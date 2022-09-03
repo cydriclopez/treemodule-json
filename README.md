@@ -2,7 +2,7 @@
 
 ## Feed JSON data to a tree component
 
-> ***This tutorial requires some knowledge in Linux, Angular, TypeScript, and Primeng components.***
+> ***This tutorial requires some knowledge in Linux, Docker, Git, Angular, TypeScript, and Primeng components.***
 
 ## Purpose
 
